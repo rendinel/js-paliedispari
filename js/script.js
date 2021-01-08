@@ -1,6 +1,9 @@
 
-var min = 1;
-var max = 5;
+// var min = 1;
+// var max = 5;
+function randomNumber (min, max)  {
+  return Math.floor(Math.random() * (max - min) ) + min
+}
 
 var oddOrEven = prompt('Pari o Dispari?');
 var numberUser;
@@ -10,23 +13,26 @@ if (oddOrEven === 'Pari' || oddOrEven === 'Dispari') {
   alert("Segui le istruzioni");
 }
 
-if (numberUser === 1 || numberUser === 2 || numberUser === 3 || numberUser === 4 || numberUser === 5) {
-  numberPc = Math.floor(Math.random() * (max - min) ) + min
+// if (numberUser === 1 || numberUser === 2 || numberUser === 3 || numberUser === 4 || numberUser === 5) {
+//   numberPc = randomNumber (1, 5)
+//   sum = numberPc + numberUser
+//   console.log('Il risultato è: ' + sum);
+// } else {
+//   alert('Segui le istruzioni');
+// }
+
+if (numberUser !== 0 && numbers <= 5  ) {
+  numberPc = randomNumber (1, 5)
   sum = numberPc + numberUser
   console.log('Il risultato è: ' + sum);
 } else {
   alert('Segui le istruzioni');
 }
 
-// if (sum % 2 === 0) {
-//   sum = 'Pari'
-// } else {
-//   sum = 'Dispari'
-// }
-//
-// if (sum = 'Pari' || sum = 'Dispari') {
-//   oddOrEven === sum
-//   alert('Hai vinto')
-// } else {
-//   alert('Hai Perso')
-// }
+if (sum % 2 === 0 && oddOrEven === 'Pari' ) {
+  alert('Hai vinto')
+} else if (sum % 2 !== 0 && oddOrEven === 'Dispari' ) {
+  alert('Hai vinto')
+} else {
+  alert('Hai perso')
+}
